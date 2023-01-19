@@ -1,6 +1,6 @@
-# Open Targets Extended
+# Open Targets Extensible API
 
-This repository manages the extended version of the [OpenTargets Genetics API](https://genetics-docs.opentargets.org/data-access/graphql-api).
+This repository template enables extending the [OpenTargets Genetics API](https://genetics-docs.opentargets.org/data-access/graphql-api) with custom data. This is intended to act as a backend data/API server. This is a good option if you have data that would be helpful to display alongside existing OpenTargets data. Please note that in order to view your data in a UI, you will have to modify an instance of the [OpenTargets Genetics App](https://github.com/opentargets/genetics-app), and point the API URL to this server instance.
 
 This works by using a `docker-compose` setup to coordinate 2 services:
 1. The Node server backend that delegates calls to the OpenTargets API while augmenting response with custom data as necessary
