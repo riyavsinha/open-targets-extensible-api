@@ -23,3 +23,11 @@ Should return:
 ```
 {"data":{"variantInfo":{"rsId":"rs4129267","chromosome":"1","position":154453788,"chromosomeB37":"1","positionB37":154426264,"refAllele":"C","altAllele":"T","nearestGene":{"id":"ENSG00000163239","symbol":"TDRD10","__typename":"Gene"},"nearestGeneDistance":48431,"nearestCodingGene":{"id":"ENSG00000163239","symbol":"TDRD10","__typename":"Gene"},"nearestCodingGeneDistance":48431,"mostSevereConsequence":"intron_variant","caddRaw":0.705045,"caddPhred":11.13,"gnomadAFR":0.13748274275195582,"gnomadAMR":0.5094339622641509,"gnomadASJ":0.4517241379310345,"gnomadEAS":0.3795336787564767,"gnomadFIN":0.3019573978123201,"gnomadNFE":0.37592809691285656,"gnomadNFEEST":0.34029916410030797,"gnomadNFENWE":0.3897058823529412,"gnomadNFESEU":0.5283018867924528,"gnomadOTH":0.3318014705882353,"__typename":"Variant"}}}
 ```
+
+## Adding Custom Data
+
+Please follow the guides in the [docs folder](/docs/) for information on how to add and serve your own data.
+
+## Backend Design
+
+See the [Backend Server README](/backend-server/README.md) for more information on the technologies used.
