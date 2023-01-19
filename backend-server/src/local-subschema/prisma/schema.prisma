@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Gene {
+  id          String  @id
+  symbol      String
+  bioType     String
+  description String
+  chromosome  String
+  tss         Int
+  start       Int
+  end         Int
+  fwdStrand   Boolean
+  exons       Int[]
+}
+
+model Variant {
+  id         String @id
+  chromosome String
+  position   String
+  refAllele  String
+  altAllele  String
+  rsId       String @unique
+  // ... 
+
+  // Relations
+  newEntitiesRelatedToVariant NewEntityRelatedToVariant[]
+}
+
+model NewEntityRelatedToVariant {
+  id        String  @id
+  variantId String
+  variant   Variant @relation(fields: [variantId], references: [id])
+  newProperty String
+}
